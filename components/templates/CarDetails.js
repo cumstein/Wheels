@@ -30,7 +30,6 @@ function CarDetails(props) {
     <div className={styles.container}>
       <div className={styles.back} onClick={backHandler}>
         <Back />
-        <p>back</p>
       </div>
       <img src={image} className={styles.image} />
       <h3 className={styles.header}>

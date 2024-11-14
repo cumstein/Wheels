@@ -15,7 +15,6 @@ function CarsList({ data }) {
     <div className={styles.container}>
       <div className={styles.back} onClick={backHandler}>
         <Back />
-        <p>back</p>
       </div>
       <div className={styles.cards}>
         {data.map((item) => (

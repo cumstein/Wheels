@@ -1,3 +1,5 @@
+import styles from "./FilterSlug.module.css";
+
 import CarsList from "@/components/templates/CarsList";
 import carsData from "@/data/carsData";
 
@@ -10,8 +12,13 @@ function FilteredCars() {
   const filteredData = carsData.filter(
     (item) => item.price > min && item.price < max
   );
-  
-  if (!filteredData.length) return <h3>Not Found</h3>;
+
+  if (!filteredData.length)
+    return (
+      <div className={styles.container}>
+        <h3>No Results Found</h3>
+      </div>
+    );
 
   return <CarsList data={filteredData} />;
 }
